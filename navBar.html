@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+
+        nav {
+            height: 15vh;
+            width: 100%;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu a:hover {
+            color: red;
+        }
+
+        nav i {
+            transition: transform 0.9s ease-in-out;
+        }
+
+        nav i:hover {
+            transform: rotateY(360deg);
+            color: red;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav>div>i {
+            margin-left: 20px;
+        }
+
+        nav>div.menu {
+            margin-right: 20px;
+        }
+
+        .banner-con {
+            width: 96.8%;
+            height: 68vh;
+            position: relative;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-img,
+        .layer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .layer {
+            background: linear-gradient(to left, rgba(255, 0, 0, 0.5), rgba(108, 54, 54, 0.5));
+        }
+
+        .card {
+            width: 50%;
+            height: 40%;
+            position: relative;
+            border: 2px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .card h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: rgb(216, 7, 7);
+        }
+
+        .card h6 {
+            font-size: 1.5em;
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+            color: beige;
+        }
+
+        .skills-con {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px auto;
+            background-color: blanchedalmond;
+            padding: 10px;
+            gap: 30px;
+        }
+
+        .skill-card {
+            width: 30%;
+            border: 3px double black;
+            background-color: wheat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: justify;
+            text-wrap: wrap;
+        }
+
+        .skill-card h1 {
+            color: rgb(216, 7, 7);
+            margin-bottom: 10px;
+            text-decoration: double underline;
+        }
+
+        .projects-con {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: beige;
+            box-sizing: border-box;
+        }
+
+        .project {
+
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 20px;
+            border: 2px solid black;
+            width: 90%;
+        }
+
+        .project h1 {
+            margin: 10px 0;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .project p {
+            padding: 10px;
+            text-align: justify;
+            text-wrap: wrap;
+            overflow: hidden;
+            color: blueviolet;
+        }
+
+        .project p:before {
+            content: "Project Description: ";
+            font-weight: bold;
+            text-decoration: underline;
+            color: chocolate;
+        }
+
+        .footer-con {
+            width: 98.4%;
+            padding: 10px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="home"><i class="fa-solid fa-house"></i></div>
+        <div class="menu">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="about.html">About</a>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </nav>
+    <div class="banner-con">
+        <img class="banner-img" src="back.jpg" alt="back">
+        <div class="layer"></div>
+        <div class="card">
+            <h1>Chiranj Kakadiya</h1>
+            <h6>Full Stack Developer</h6>
+            <p>Welcome to my personal website. Here you can find information about my projects, skills, and contact
+                details.</p>
+            <p>Feel free to explore and connect with me!</p>
+        </div>
+    </div>
+    <div class="skills-con">
+        <div class="skill-card">
+            <h1>JavaScript</h1>
+            <p>JavaScript is a versatile programming language used for web development, allowing for interactive and
+                dynamic
+                content on websites.</p>
+        </div>
+        <div class="skill-card">
+            <h1>HTML</h1>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages and web
+                applications.</p>
+        </div>
+        <div class="skill-card">
+            <h1>CSS</h1>
+            <p>CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a
+                document written in HTML or XML.</p>
+        </div>
+        <div class="skill-card">
+            <h1>Python</h1>
+            <p>Python is a high-level, interpreted programming language known for its readability and versatility,
+                widely used in web development, data analysis, artificial intelligence, and more.</p>
+        </div>
+        <div class="skill-card">
+            <h1>PHP</h1>
+            <p>PHP (Hypertext Preprocessor) is a popular general-purpose scripting language that is especially suited to
+                web development.</p>
+        </div>
+        <div class="skill-card">
+            <h1>Java</h1>
+            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few
+                implementation dependencies as possible.</p>
+        </div>
+        <div class="skill-card">
+            <h1>SQL</h1>
+            <p>SQL (Structured Query Language) is a standard programming language specifically for managing and
+                manipulating relational databases.</p>
+        </div>
+
+    </div>
+    <div class="projects-con">
+        <div class="project">
+            <h1>Attendance</h1>
+            <p>Description of Attendance project. This project involves building a mobile application for tracking
+                attendance.</p>
+        </div>
+        <div class="project">
+            <h1>Library Management</h1>
+            <p>Description of Library Management project. This project involves creating a system for managing library
+                resources.</p>
+        </div>
+        <div class="project">
+            <h1>Online Shopping</h1>
+            <p>Description of Online Shopping project. This project involves developing an e-commerce platform for
+                online shopping.</p>
+        </div>
+        <div class="project">
+            <h1>Quiz</h1>
+            <p>Description of Online Quiz project. This project involves creating an online quiz application for
+                educational purposes.</p>
+        </div>
+        <div class="project">
+            <h1>Online Voting</h1>
+            <p>Description of Online Voting project. This project involves building a secure online voting system for
+                elections.</p>
+        </div>
+        <div class="project">
+            <h1>Online Banking</h1>
+            <p>Description of Online Banking project. This project involves creating a secure online banking platform
+                for users to manage their finances.</p>
+        </div>
+        <div class="project">
+            <h1>Food Delivery</h1>
+            <p>Description of Online Food Delivery project. This project involves developing a platform for ordering
+                food online from local restaurants.</p>
+        </div>
+        <div class="project">
+            <h1>Exam</h1>
+            <p>Description of Online Exam project. This project involves creating a system for conducting online exams
+                securely.</p>
+        </div>
+        <div class="project">
+            <h1>Resume Builder</h1>
+            <p>Description of Online Resume Builder project. This project involves developing a tool for users to
+                create professional resumes online.</p>
+        </div>
+        <div class="project">
+            <h1>Portfolio</h1>
+            <p>Description of Online Portfolio project. This project involves building a personal portfolio website to
+                showcase skills and projects.</p>
+        </div>
+        <div class="project">
+            <h1>Chat Application</h1>
+            <p>Description of Online Chat Application project. This project involves creating a real-time chat
+                application for users to communicate online.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-con">
+            <p>&copy; 2025 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

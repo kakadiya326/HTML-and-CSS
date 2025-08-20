@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Format</title>
+    <style>
+      .left {
+        text-align: left;
+        color: blue;
+        font-size: 15px;
+        font-weight: 100;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-variant: small-caps;
+      }
+      .right {
+        text-align: right;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+      .center {
+        text-align: center;
+      }
+      .justify {
+        text-align: justify;
+        text-indent: 50px;
+        line-height: 20px;
+        letter-spacing: 3px;
+        word-spacing: 10px;
+      }
+      .font-fam {
+        font-family: "Playwrite AU QLD", cursive;
+      }
+      .font-fam::before {
+        content: "This is font-family : ";
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="left">Left</p>
+    <p class="right">Right</p>
+    <p class="center">Center</p>
+    <p class="justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur totam
+      voluptate incidunt corporis id voluptatibus obcaecati beatae, a minima
+      consequuntur suscipit atque quas molestias distinctio repudiandae facilis
+      dolore rerum culpa debitis! Illum fugiat nam commodi molestias non.
+      Voluptatem odio, maiores neque voluptas dolor voluptatibus soluta
+      explicabo sequi suscipit similique, illo assumenda, id sint! Itaque illo
+      voluptates eveniet reiciendis accusantium debitis, temporibus eos quo
+      repudiandae sapiente, consequatur ab assumenda. Neque debitis magnam ab
+      magni, consequuntur soluta quae similique reiciendis expedita eum nemo
+      optio hic ut. Amet ad illum totam laborum accusantium exercitationem
+      deleniti, nemo dignissimos adipisci molestiae saepe sequi rerum. Minima.
+    </p>
+    <p class="font-fam">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam non
+      quidem facilis aut, ipsum exercitationem inventore hic doloribus
+      voluptates alias, at, optio odit repudiandae? Beatae neque harum molestiae
+      culpa amet odit adipisci, corporis labore laborum quo sit ducimus dolore
+      ipsum exercitationem, maiores distinctio earum animi reprehenderit libero
+      minima in necessitatibus.
+    </p>
+  </body>
+</html>
