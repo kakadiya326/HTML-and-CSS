@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS practise website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 100%;
+            height: 15vh;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            background-color: #b4ca65;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            color: #f0f0f0;
+            font-size: 30px;
+        }
+
+        .menu {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #515f1f;
+        }
+
+        .banner-con {
+            width: 100%;
+            height: 100vh;
+
+            background: linear-gradient(to bottom, #b3c966 93%, #809e15 7%);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            align-items: center;
+            gap: 25px;
+
+        }
+
+        .banner-con>img {
+            width: 30%;
+            height: 17%;
+            border-radius: 10px;
+        }
+
+        .banner-text {
+            font-size: 90px;
+            font-weight: bolder;
+            color: #a91e50;
+        }
+
+        .banner-text::before {
+            content: "<%=";
+            font-size: 50px;
+        }
+
+        .banner-text::after {
+            content: "%>";
+            font-size: 50px;
+        }
+
+        .banner-txt {
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .banner-con button {
+            width: 15%;
+            height: 45px;
+            text-transform: uppercase;
+            background-color: #bf225a;
+            border: 1px solid #bf225a;
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .about-con {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .about-card {
+            width: 60%;
+            height: auto;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .about-card>h1 {
+            font-size: 40px;
+            color: #515f1f;
+            margin-top: -20px;
+        }
+
+        .about-card div {
+            font-size: 16px;
+            color: rgb(96, 93, 93);
+        }
+
+        .facility-con {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .facility-card {
+            width: 28%;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: start;
+            gap: 20px;
+        }
+
+        .facility-con .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content>h4,
+        .icon>i {
+            color: rgb(169, 30, 80);
+            font-size: 20px;
+            margin: 0px;
+            font-weight: bolder;
+        }
+
+        .notes-con {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+
+        .notes-card {
+            height: auto;
+            width: 50%;
+            border: 1px solid lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 30px 60px;
+            box-sizing: border-box;
+
+
+        }
+
+        .notes-card>h1 {
+            color: #607026;
+            /* margin: 0px; */
+        }
+
+        h1+div {
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        .notes-card div {
+            font-size: 16px;
+            color: rgb(56, 54, 54);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .con-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-left: 1px solid lightgray;
+        }
+
+        .con-text div {
+            font-size: 14px;
+            font-style: italic;
+            padding-left: 20px;
+        }
+
+        .notes-card h1+div span {
+            color: #607026;
+
+        }
+
+        .notes-card h1+div a {
+            text-decoration: none;
+        }
+
+        .notes-card code {
+            width: 100%;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            font-size: 13px;
+            text-align: start;
+            padding: 15px 0px 15px 10px;
+        }
+        .features-con{
+            width: 100%;
+            height: 70vh;
+            background-color: #809e159f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            
+        }
+        .features-con div::before{
+            content: "✔";
+            color: white;
+        }
+        .features-con div{
+            color: #809e15;
+            font-size: 20px;
+        }
+        .features-con h1{
+            color: #515f1f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1 class="logo">EJS</h1>
+        <div class="menu">
+            <a href="about">About</a>
+            <a href="features">Features</a>
+            <a href="started">Get Started</a>
+            <a href="docs">Docs</a>
+            <a href="support">Support</a>
+            <a href="license">License</a>
+            <a href="github">GitHub</a>
+
+        </div>
+    </nav>
+    <div class="banner-con">
+        <img src="jake_display.png" alt="jake">
+        <div class="banner-text">
+            EJS
+        </div>
+        <div class="banner-txt">
+            Embedded JavaScript templating.
+        </div>
+        <button>Get Start</button>
+    </div>
+    <div class="about-con">
+        <div class="about-card">
+            <h1>What is EJS?</h1>
+            <div>What is the "E" for? "Embedded?" Could be. How about "Effective," "Elegant," or just "Easy"? EJS is a
+                simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness
+                about
+                how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript.</div>
+        </div>
+        <div class="facility-con">
+            <div class="facility-card">
+                <div class="icon"><i class="fa-solid fa-heart"></i></div>
+                <div class="content">
+                    <h4>Use plain JavaScript</h4>
+                    <div class="inside-txt">
+                        We love JavaScript. It's a totally friendly language. All templating languages grow to be
+                        Turing-complete. Just cut out the middle-man, and use JS!
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="content">
+                    <h4>Use plain JavaScript</h4>
+                    <div class="inside-txt">
+                        We love JavaScript. It's a totally friendly language. All templating languages grow to be
+                        Turing-complete. Just cut out the middle-man, and use JS!
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="icon"><i class="fa-solid fa-code"></i></div>
+                <div class="content">
+                    <h4>Simple syntax</h4>
+                    <div class="inside-txt">
+                        JavaScript code in simple, straightforward scriptlet tags. Just write JavaScript that emits the
+                        HTML
+                        you want, and get the job done!
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="icon"><i class="fa-solid fa-jet-fighter"></i></div>
+                <div class="content">
+                    <h4>Speedy execution</h4>
+                    <div class="inside-txt">
+                        We all know how fast V8 and the other JavaScript runtimes have gotten. EJS caches the
+                        intermediate JS functions for fast execution.
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                <div class="content">
+                    <h4>Easy debugging</h4>
+                    <div class="inside-txt">
+                        It's easy to debug EJS errors: your errors are plain JavaScript exceptions, with template
+                        line-numbers included.
+                    </div>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="icon"><i class="fa-sharp fa-solid fa-flask"></i></div>
+                <div class="content">
+                    <h4>Active development</h4>
+                    <div class="inside-txt">
+                        EJS has a large community of active users, and the library is under active development. We're
+                        happy to answer your questions or give you help.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="notes-con">
+        <div class="notes-card">
+            <h1>Security Professionals: Please Note</h1>
+            <div>Before reporting any security issues, please reference the <a href=""><span>SECURITY.md </span></a> for
+                the project, partcularly the
+                following:
+            </div>
+            <div class="con-text">
+                <div>If you give end-users unfettered access to the EJS render method, you are using EJS in an
+                    inherently un-secure way. Please do not report security issues that stem from doing that.
+                </div>
+                <div>EJS is effectively a JavaScript runtime. Its entire job is to execute JavaScript. If you run the
+                    EJS render method without checking the inputs yourself, you are responsible for the results.
+                </div>
+            </div>
+            <div>In short, DO NOT submit 'vulnerabilities' that include this snippet of code:</div>
+            <code>
+                app.get('/', (req, res) => { <br>
+                    res.render('index', req.query); <br>
+                });
+            </code>
+        </div>
+    </div>
+    <div class="features-con">
+        <h1>Features</h1>
+        <div>Fast compilation and rendering</div>
+        <div>Simple template tags: <% %></div>
+        <div>Custom delimiters (e.g., use [? ?] instead of <% %>)</div>
+        <div>Sub-template includes</div>
+        <div>Ships with CLI</div>
+        <div>Both server JS and browser support</div>
+        <div>Static caching of intermediate JavaScript</div>
+        <div>Static caching of templates</div>
+        <div>Complies with the Express view system</div>
+    </div>
+
+
+</body>
+
+</html>
