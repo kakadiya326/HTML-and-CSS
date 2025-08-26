@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #242323;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        font-weight: bold;
+        margin-right: 2rem;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        margin-right: 1rem;
+    }
+
+    button {
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .login {
+        background-color: transparent;
+        color: #333;
+    }
+
+    .signup {
+        background-color: #0070f3;
+        color: white;
+    }
+
+    .dropdown-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100vh;
+        top: 160%;
+        justify-content: space-between;
+        display: none;
+        position: absolute;
+        border-radius: 15px;        
+        font-weight: 500;
+        border: 3px solid white;
+        background: linear-gradient(to left,#1e242c 50%,#272f38 50%);
+        color: white;
+    }
+
+    .dropdown-container:hover .dropdown {
+        display: flex;
+    }
+
+    .dropdown a{
+        text-decoration: underline;
+        color: white;
+    }
+
+    .left-dropdown-menu-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 50%;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .left-dropdown-menu-side div:first-child, .right-dropdown-menu-side div:first-child {
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #121010;
+    }
+    .left-dropdown-menu-side a{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .right-dropdown-menu-side {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    .right-dropdown-menu-side-content{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .right-dropdown-menu-side-content a{
+        width: 50%;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding-bottom: 15px;
+    }
+    .right-dropdown-menu-side #spanie{
+        display: block;
+        background-color: rgb(68, 68, 68);
+        width: 100%;
+        height: 1px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="left">
+            <div class="logo">
+                Netlify
+            </div>
+            <div class="dropdown-container">Platform<i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown">
+                    <div class="left-dropdown-menu-side">
+                        <div>The Netlify Platform</div>
+                        <div>Instantly build and deploy your apps to our global network from Git. Custom domains, https,
+                            deploy previews, rollbacks and much more.</div>
+                        <a href="#">Explore the platform</a>
+                    </div>
+                    <div class="right-dropdown-menu-side">
+                        <div>Key Features</div>
+                        <div class="right-dropdown-menu-side-content">
+                            <a href="#">Deploy Previews</a>
+                            <a href="#">Functions</a>
+                            <a href="#">Storage</a>
+                            <a href="#">Primitives</a>
+                            <a href="#">Connect</a>
+                            <a href="#">Create</a>
+                            <a href="#">Security</a>
+                            <a href="#">Edge network</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-container">Solutions<i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown">
+                    <div class="left-dropdown-menu-side">
+                        <div>Why Netlify?</div>
+                        <a href="#">Customers</a>
+                        <a href="#">Agent Experience</a>
+                        <a href="#">ROI Calculator</a>
+                        <a href="#">Whitepaper</a>
+                        <a href="#">Partner directory</a>
+                    </div>
+                    <div class="right-dropdown-menu-side">
+                        <div>Use Cases</div>
+                        <a href="#">Code Agents</a>
+                        <a href="#">Company Websites</a>
+                        <a href="#">E-commerce</a>
+                        <a href="#">Web Apps</a>
+                        <a href="#">Large Sites</a>
+                        <span id="spanie"></span>
+                        <div>Don’t see your solution? We can help. Chat with a Netlify expert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-container">Developers<i class="fa-solid fa-angle-down"></i>
+
+            </div>
+            <div class="dropdown-container">Resources<i class="fa-solid fa-angle-down"></i>
+
+            </div>
+            <div>Pricing</div>
+        </div>
+        <div class="right">
+            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>Contact</div>
+            <button class="login">Log in</button><button class="signup">Sign up</button>
+        </div>
+    </nav>
+</body>
+
+</html>
