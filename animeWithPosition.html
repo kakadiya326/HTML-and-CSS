@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation with position</title>
+    <style>
+        .con{
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            background-color: cadetblue;
+            overflow: hidden;
+        }
+        h1{
+            position: absolute;
+            font-size: 30px;
+            height: 40px;
+            top: 35%;
+            color: white;
+            text-shadow: 2px 2px 5px crimson;
+            animation: slide 0.2s linear infinite alternate;
+        }
+        @keyframes slide{
+            from{
+                left: -35;
+            }
+            to{
+                left: 100%;
+            }
+        }
+
+        .con1{
+            width: 100%;
+            height: 100vh;
+            animation: demo 10s infinite;
+            background: url(profile.png);
+            background-size: 600px 600px;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes demo{
+            0%{
+                background: url(jake_display.png);
+            }
+            50%{
+                background: url(left-banner.jpg);
+            }
+            100%{
+                background: url(left-banner-etsy.webp);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1>Welcome to XYZ.COM</h1>
+    </div>
+    <div class="con1"></div>
+</body>
+</html>
