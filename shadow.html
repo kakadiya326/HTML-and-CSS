@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow of text and box</title>
+    <style>
+        h1 {
+            font-size: 40px;
+            color: crimson;
+            /* text-shadow: 3px 3px 2px blue; */
+            text-shadow: 3px 3px 2px blue, 4px 4px 4px green;
+        }
+
+        .con {
+            width: 30%;
+            height: 20vh;
+            background-color: aqua;
+            position: relative;
+            top: 20vh;
+            left: 20%;
+            box-shadow: 0px 0px 5px 5px green, 5px 5px 15px 5px red;
+        }
+        .con:hover{
+            box-shadow: 0px 0px 5px 5px green, 5px 5px 15px 5px red,10px 10px 20px 5px blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+    <div class="con">
+
+    </div>
+</body>
+
+</html>
