@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple animation with from and to</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .con {
+            width: 10%;
+            height: 10vh;
+            background-color: pink;
+            animation: demo 5s infinite 3s normal forwards;
+        }
+
+        .con1 {
+            width: 10%;
+            height: 10vh;
+            background-color: pink;
+            animation: demo 5s linear 3s 1 alternate backwards;
+        }
+
+        .con2 {
+            width: 10%;
+            height: 10vh;
+            background-color: pink;
+            animation: demo 5s ease 3s 1 reverse both;
+        }
+        .con3 {
+            width: 10%;
+            height: 10vh;
+            background-color: pink;
+            animation: demo 5s ease-in 3s 1 alternate-reverse none;
+        }
+        .con4 {
+            width: 10%;
+            height: 10vh;
+            background-color: pink;
+            animation: demo 5s ease-out 3s 1;
+        }
+        .con5 {
+            width: 10%;
+            height: 10vh;
+            background-color: pink;
+            animation: demo 5s ease-in-out 3s 1;
+        }
+        @keyframes demo {
+            from {
+                background-color: lightpink;
+            }
+
+            to {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">infinite</div>
+    <div class="con1">linear</div>
+    <div class="con2">ease</div>
+    <div class="con3">ease-in</div>
+    <div class="con4">ease-out</div>
+    <div class="con5">ease-in-out</div>
+</body>
+
+</html>
