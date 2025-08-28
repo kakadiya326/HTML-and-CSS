@@ -69,24 +69,7 @@
         width: 100%;
     }
 
-    .dropdown {
-        width: 100vh;
-        top: 160%;
-        justify-content: space-between;
-        display: none;
-        position: absolute;
-        border-radius: 15px;        
-        font-weight: 500;
-        border: 3px solid white;
-        background: linear-gradient(to left,#1e242c 50%,#272f38 50%);
-        color: white;
-    }
-
-    .dropdown-container:hover .dropdown {
-        display: flex;
-    }
-
-    .dropdown a{
+    .dropdown a {
         text-decoration: underline;
         color: white;
     }
@@ -101,13 +84,15 @@
         padding: 15px;
     }
 
-    .left-dropdown-menu-side div:first-child, .right-dropdown-menu-side div:first-child {
+    .left-dropdown-menu-side div:first-child,
+    .right-dropdown-menu-side div:first-child {
         font-weight: bold;
         font-size: 1.2rem;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: #121010;
     }
-    .left-dropdown-menu-side a{
+
+    .left-dropdown-menu-side a {
         font-size: 0.9rem;
         font-weight: 600;
     }
@@ -119,23 +104,48 @@
         gap: 20px;
         padding: 15px;
     }
-    .right-dropdown-menu-side-content{
+
+    .right-dropdown-menu-side-content {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        
+
     }
-    .right-dropdown-menu-side-content a{
+
+    .right-dropdown-menu-side-content a {
         width: 50%;
         font-size: 0.9rem;
         font-weight: 600;
         padding-bottom: 15px;
     }
-    .right-dropdown-menu-side #spanie{
+
+    .right-dropdown-menu-side #spanie {
         display: block;
         background-color: rgb(68, 68, 68);
         width: 100%;
         height: 1px;
+    }
+
+    .dropdown {
+        width: 80vh;
+        top:160%;
+        justify-content: space-between;
+        display: flex;
+        position: absolute;
+        visibility: hidden;
+        border-radius: 15px;
+        font-weight: 500;
+        border: 3px solid white;
+        background: linear-gradient(to left, #1e242c 50%, #272f38 50%);
+        color: white;
+        transition: all 0.2s ease-in;
+        opacity: 0.2;
+    }
+
+    .dropdown-container:hover .dropdown {
+        visibility: visible;
+        opacity: 1;
+        width: 100vh;
     }
 </style>
 
@@ -191,10 +201,55 @@
                 </div>
             </div>
             <div class="dropdown-container">Developers<i class="fa-solid fa-angle-down"></i>
-
+                <div class="dropdown">
+                    <div class="left-dropdown-menu-side">
+                        <div>Where to start</div>
+                        <a href="#">Docs</a>
+                        <a href="#">Developer guides</a>
+                        <a href="#">Templates</a>
+                        <a href="#">Integrations</a>
+                        <a href="#">Build with AI</a>
+                    </div>
+                    <div class="right-dropdown-menu-side">
+                        <div>Project kickstarts</div>
+                        <div class="right-dropdown-menu-side-content">
+                            <a href="#">Astro</a>
+                            <a href="#">TanStack</a>
+                            <a href="#">Next.js</a>
+                            <a href="#">Nuxt</a>
+                            <a href="#">Gatsby</a>
+                            <a href="#">Wordpress</a>
+                            <a href="#">React</a>
+                            <a href="#">Vue</a>
+                            <a href="#">Svelte</a>
+                            <a href="#">Sitecore</a>
+                            <a href="#">Jamstack</a>
+                            <a href="#">More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="dropdown-container">Resources<i class="fa-solid fa-angle-down"></i>
-
+                <div class="dropdown">
+                    <div class="left-dropdown-menu-side">
+                        <div>Resources to help you</div>
+                        <a href="#">Help center</a>
+                        <a href="#">Community forum</a>
+                        <a href="#">Status</a>
+                        <a href="#">Developers</a>
+                        <a href="#">Support plans</a>
+                    </div>
+                    <div class="right-dropdown-menu-side">
+                        <div class="right-dropdown-menu-side-content">
+                            <a href="#">Blog</a>
+                            <a href="#">Changelog</a>
+                            <a href="#">Events</a>
+                            <a href="#">Customers</a>
+                            <a href="#">Partner directory</a>
+                            <a href="#">All resources</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>Pricing</div>
         </div>
