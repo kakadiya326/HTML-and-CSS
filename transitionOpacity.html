@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity and Text</title>
+    <style>
+        .con{
+            position: relative;
+            width: 350px;
+            height: 250px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .layer{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(124,23,23,0.7),rgba(23,55,46,0.7));
+            opacity: 0;
+            transition: all 5s linear;
+        }
+        .text{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 35px;
+            font-weight: bolder;
+            color: crimson;
+            opacity: 0;
+            bottom: 0%;
+            transition: all 5s ease-in;
+        }
+        .con:hover .layer{
+            opacity: 1;
+        }
+        .con:hover .text{
+            opacity: 1;
+            bottom: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <img src="profile.png" alt="image">
+        <div class="layer"></div>
+        <div class="text">Hello</div>
+    </div>
+</body>
+</html>
