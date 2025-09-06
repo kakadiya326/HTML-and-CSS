@@ -19,11 +19,17 @@
     }
 
     nav {
+        position: sticky;
+        top: 0px;
+        left: 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        background-color: #242323;
+        background: rgba(33, 32, 32, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 25;
     }
 
     .left {
@@ -56,17 +62,23 @@
 
     .login {
         background-color: transparent;
-        color: #333;
+        color: #fff;
     }
 
     .signup {
-        background-color: #0070f3;
+        background-color: cyan;
+        color: cadetblue;
+    }
+
+    .signup:hover {
+        background-color: rgb(30, 199, 255);
         color: white;
     }
 
     .dropdown-container {
         position: relative;
         width: 100%;
+        z-index: 20;
     }
 
     .dropdown a {
@@ -128,7 +140,7 @@
 
     .dropdown {
         width: 80vh;
-        top:160%;
+        top: 160%;
         justify-content: space-between;
         display: flex;
         position: absolute;
@@ -146,6 +158,166 @@
         visibility: visible;
         opacity: 1;
         width: 100vh;
+    }
+
+    .main-home-con {
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        background: linear-gradient(to bottom, #000000, #25568e73);
+        position: relative;
+    }
+
+    .main-sub-home-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .main-home-con h1 {
+        width: 40%;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .main-home-con div:nth-child(2) {
+        font-size: 1.5rem;
+        width: 70%;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .main-home-con button {
+        width: 230px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    #btn1 {
+        background-color: cyan;
+        color: cadetblue;
+    }
+
+    #btn1:hover {
+        background-color: rgb(30, 199, 255);
+        color: white;
+    }
+
+    #btn2 {
+        background: transparent;
+        color: white;
+        font-weight: bolder;
+    }
+
+    #btn2:hover {
+        border: 1px solid white;
+    }
+
+    .img-card {
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-info-con {
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+        padding-top: 200px;
+        gap: 2rem;
+        background-color: rgb(33, 32, 32);
+    }
+
+    .slide-icons {
+        overflow: hidden;
+        width: max-content;
+        height: 30vh;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .slide-icons img {
+        animation: slide 5s linear infinite;
+        color: white;
+        object-fit: contain;
+        filter: invert(1);
+        width: 200px;
+        height: auto;
+        margin: 2rem 0;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .main-sub-info-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .main-sub-info-con h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-sub-info-con:nth-child(2) {
+        font-size: 1.2rem;
+        width: 70%;
+        text-align: center;
+    }
+
+    .facility-card-con{
+        width: 95%;
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .facility-card-content{
+        background-color: #1e242c;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 20px;
+        text-align: left;
+        width: 33%;
+    }
+    .facility-card-content h4{
+        display: inline-block;
+        font-weight: 100;
+        margin: 10px 0;
+        border-radius: 20px;
+        padding: 4px 9px;
+        box-sizing: border-box;
+    }
+    .facility-card-content h1{
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+    .facility-card-content div{
+        font-size: 1rem;
+        line-height: 1.5;
     }
 </style>
 
@@ -259,6 +431,67 @@
             <button class="login">Log in</button><button class="signup">Sign up</button>
         </div>
     </nav>
+    <div class="main-home-con">
+        <div class="main-sub-home-con">
+            <h1>Push your ideas to the web</h1>
+            <div>Deploy any modern frontend stack, from marketing sites to AI apps. Join millions of developers and
+                teams
+                shipping faster on Netlify.
+            </div>
+            <button id="btn1">Get Started</button>
+            <button id="btn2">Request a Demo</button>
+        </div>
+        <div class="main-sub2-home-con">
+            <img src="netlify-img-card.svg" alt="img-card" class="img-card">
+        </div>
+    </div>
+    <div class="main-info-con">
+        <div class="slide-icons">
+            <img src="kubernetes.svg" alt="kubernetes">
+            <img src="figma.svg" alt="figma">
+            <img src="navan.svg" alt="navan">
+            <img src="contentful.svg" alt="contentful">
+            <img src="unilever.svg" alt="unilever">
+            <img src="stack-overflow.svg" alt="stack-overflow">
+            <img src="riot-games.svg" alt="riot-games">
+            <img src="nike.svg" alt="nike">
+        </div>
+        <div class="main-sub-info-con">
+            <h1>One platform. Prompt to production.</h1>
+            <div>A developer and agent experience that just works-optimized builds, collaborative previews, and instant
+                rollbacks on a global edge network. Focus on your users and code while we handle the rest.</div>
+        </div>
+        <div class="facility-card-con">
+            <div class="facility-card-content">
+                <h4 style="background-color: rgb(192, 218, 192); color: rgb(4, 76, 4);">Build & integrate</h4>
+                <h1>Experiment faster</h1>
+                <div>
+                    Build any frontend app with your favorite stack and more flexible serverless infrastructure than
+                    anywhere else - from edge functions to background jobs.
+                </div>
+            </div>
+            <div class="facility-card-content">
+                <h4 style="background-color: rgb(174, 207, 218); color: rgb(3, 69, 91);">Deploy & collaborate</h4>
+                <h1>Iterate together</h1>
+                <div>
+                    Turn every Git push into a production-ready release. Get instant deploy previews and keep your team
+                    in sync without managing configs, variables, or staging servers.
+                </div>
+            </div>
+            <div class="facility-card-content">
+                <h4 style="background-color: rgb(212, 214, 172); color: rgb(81, 85, 7);">Run & scale</h4>
+                <h1>Scale automatically</h1>
+                <div>
+                    Deliver sub-second experiences globally with granular cache and routing controls. Go from zero to
+                    enterprise-level traffic with built-in security.
+                </div>
+            </div>
+        </div>
+        <button class="signup" ><h3 style="margin: 0px; color: #000000;">Explore the Platform</h3></button>
+    </div>
+    <div>
+    
+    </div>
 </body>
 
 </html>

@@ -14,16 +14,18 @@
         }
         h1{
             position: absolute;
+            word-break: break-all;
             font-size: 30px;
             height: 40px;
+            overflow: hidden;
             top: 35%;
             color: white;
             text-shadow: 2px 2px 5px crimson;
-            animation: slide 0.2s linear infinite alternate;
+            animation: slide 2s linear infinite;
         }
         @keyframes slide{
             from{
-                left: -35;
+                left: -35%;
             }
             to{
                 left: 100%;

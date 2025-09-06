@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Card</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #111;
+      margin: 0;
+    }
+
+    /* 🔥 Outer container with rotating gradient border */
+    .card-border {
+      position: relative;
+      width: 50%;
+      height: 80vh;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-border::before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
+      animation: rotate 5s linear infinite;
+    }
+
+    /* Inner card to hold content */
+    .card-content {
+      position: relative;
+      background: white;
+      border-radius: 20px;
+      padding: 10px;
+      width: 95%;
+      height: 90%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card-border">
+    <div class="card-content">
+      <img src="netlify-img-card.svg" alt="Card Image">
+    </div>
+  </div>
+
+</body>
+
+</html>
