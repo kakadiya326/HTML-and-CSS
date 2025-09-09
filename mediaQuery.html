@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        nav {
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .con {
+            width: 100%;
+            background-color: bisque;
+            padding: 50px 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 30px;
+        }
+
+        .card {
+            width: 30%;
+            height: 250px;
+            background-color: aqua;
+        }
+
+        .print {
+            background-color: orangered;
+            color: white;
+        }
+
+        @media screen and (max-width:500px) {
+            nav {
+                flex-direction: column;
+                background-color: chocolate;
+                height: 30vh;
+            }
+
+            .card {
+                width: 80%;
+            }
+        }
+        @media screen and (min-width:500px) and (max-width:700px){
+            nav{
+                flex-wrap: wrap;
+                height: 15vh;
+                background-color: brown;
+            }
+            nav div{
+                width: 30%;
+                text-align: center;
+            }
+            .card{
+                width: 45%;
+            }
+        }
+        @media print{
+            nav,.card{
+                display: none;
+            }
+            .print{
+                width: 100%;
+                padding: 20px;
+                text-indent: 50px;
+                text-align: justify;
+                background: none;
+                color: black;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>Home </div>
+        <div>About </div>
+        <div>Login </div>
+        <div>Register </div>
+        <div>Contact Us </div>
+        <div>Products </div>
+    </nav>
+    <div class="con">
+        <div class="card"></div>
+    </div>
+    <div class="print">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quidem quas, rem ea ad expedita illo
+        perferendis obcaecati, nemo harum voluptatibus tempora eius quia quam pariatur dolorum nulla quisquam ratione
+        repudiandae natus. Et nesciunt, velit laudantium tenetur corporis repellat expedita reprehenderit vel ex
+        doloribus molestias earum amet delectus harum! Placeat voluptas a quis cumque voluptates dolorum numquam eos
+        alias magni repellendus asperiores et voluptatem, dolor minus soluta quibusdam voluptatibus maxime ex enim
+        exercitationem. Officiis distinctio illum ea atque aut. Ea est recusandae ipsam quae repellendus? Quo voluptates
+        pariatur dolor, eligendi iste fuga hic at ducimus voluptate, nam asperiores, ipsam laborum.
+    </div>
+</body>
+
+</html>
