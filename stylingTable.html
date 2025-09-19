@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling table </title>
+    <style>
+        table{
+            width: 100%;
+            font-size: 20px;
+        }
+        table,tr,td,th{
+            border-collapse: collapse;
+        }
+        td,th{
+            height: 60px;
+            text-align: center;
+            vertical-align: bottom;
+        }
+        tr:nth-child(odd){
+            background-color: darkolivegreen;
+            color: red;
+        }
+        tr:hover{
+            color: crimson;
+            background-color: pink;
+        }
+        tr:first-child{
+            background-color: black;
+            color: white;
+        }
+        td:nth-child(even){
+            background-color: darkcyan;
+            color: darkred;
+        }
+        td:hover{
+            color: blue;
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Sname</th>
+            <th>Fname</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Kakadiya</td>
+            <td>Chiranj</td>
+            <td>9643679543</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Kakadiya</td>
+            <td>Chiranj</td>
+            <td>9643679543</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Kakadiya</td>
+            <td>Chiranj</td>
+            <td>9643679543</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Kakadiya</td>
+            <td>Chiranj</td>
+            <td>9643679543</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Kakadiya</td>
+            <td>Chiranj</td>
+            <td>9643679543</td>
+        </tr>
+    </table>
+</body>
+</html>
