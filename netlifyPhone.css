@@ -1,0 +1,317 @@
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .logo .highlight {
+        font-size: 1.5rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: aqua;
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: start;
+        gap: 0px;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        height: 50px;
+        background-color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: height 0.3s ease;
+    }
+
+    nav .left,
+    nav .right {
+        display: none;
+    }
+
+    nav .menu-toggle:hover~.left,
+    nav .menu-toggle:hover~.right {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #555;
+        padding-bottom: 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dropdown-container i,
+    .left .logo {
+        display: none;
+    }
+
+    /* Section-2 */
+
+    .main-home-con {
+        height: 66vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 40px;
+        background: linear-gradient(to bottom, #000000, #25568e73);
+        position: relative;
+    }
+
+    .main-sub-home-con h1 {
+        width: 40%;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .main-sub-home-con div:nth-child(2) {
+        font-size: 1rem;
+        width: 70%;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .main-home-con button {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    /* section-2 card */
+
+    .card-border {
+        width: 300px;
+        height: 300px;
+        max-width: 100%;
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-border::before {
+        content: "";
+        position: absolute;
+        inset: -70%;
+        background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
+        animation: rotate 5s linear infinite;
+    }
+
+    .card-content {
+        position: relative;
+        background: white;
+        border-radius: 20px;
+        padding: 10px;
+        width: 90%;
+        height: 90%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* section-3 */
+
+    .slide-icons {
+        height: 17vh;
+    }
+
+    .main-sub-info-con h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-sub-info-con:nth-child(2) {
+        font-size: 1rem;
+    }
+
+    .facility-card-con {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .facility-card-content {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .facility-card-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .facility-card-content h1 {
+        font-size: 1.4rem;
+    }
+
+    /* section-4 */
+
+    .project-desc-con>div:first-child {
+        font-size: 1rem;
+    }
+
+    .project-desc-con>div:nth-child(2) {
+        font-size: 1rem;
+    }
+
+    .project-item-main-con {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .project-item-con {
+        width: 100%;
+        height: 300px;
+    }
+
+    .project-items-card {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 50px 10px grey;
+    }
+
+    .project-item-front div:nth-child(2) {
+        font-size: 0.8rem;
+    }
+
+    .project-item-front div:nth-child(3) {
+        font-size: 1rem;
+    }
+
+    .project-insider {
+        bottom: -50px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .project-insider div:nth-child(1) {
+        font-size: 1rem;
+    }
+
+    .project-insider div:nth-child(2) {
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+
+    /* section-5 */
+
+    .simple-card {
+        flex-direction: column;
+    }
+
+    .simple-left,
+    .simple-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+    }
+
+    .simple-left {
+        border-bottom: 2px solid white;
+        padding-bottom: 40px;
+    }
+
+    .simple-right h1 {
+        font-size: 1.4rem;
+    }
+
+    .simple-left div,
+    .simple-right div {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .simple-right {
+        padding-top: 20px;
+    }
+
+    .outer-simple-con h1 {
+        font-size: 1.8rem;
+    }
+
+    /* section-6 */
+    footer {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 70px;
+    }
+    .footer-items{
+        flex-wrap: wrap;
+        border-bottom: 3px solid white;
+        padding-bottom: 40px;
+    }
+    .footer-item{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .subscribe input {
+        width: 60%;
+        height: 30px;
+        font-size: 15px;
+        background-color: darkgrey;
+        border: none;
+        border-radius: 4px;
+    }
+
+}
