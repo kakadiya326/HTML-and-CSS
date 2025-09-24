@@ -6,7 +6,12 @@
         color: white;
         position: relative;
     }
-
+    .menu-toggle{
+        display: none;
+    }
+    .logo1 {
+        display: none;
+    }
 
     body>button {
         position: fixed;
@@ -47,6 +52,11 @@
     .logo {
         font-weight: bold;
         margin-right: 2rem;
+    }
+    .logo::first-letter{
+        font-size: 1.5rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: aqua;
     }
 
     .right {
