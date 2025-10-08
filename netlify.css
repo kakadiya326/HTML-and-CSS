@@ -36,7 +36,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        background: rgba(33, 32, 32, 0.4);
+        background: rgba(33, 32, 32, 0.9);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         z-index: 25;
