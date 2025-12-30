@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custome Fonts</title>
+    <style>
+        @font-face {
+            font-family: "MyFont";
+            src: local("MyFont"),
+                /* if installed then use it otherwise install */
+                url("fonts/RubikGemstones-Regular.ttf") format("woff2");
+            font-weight: 700;
+            font-style: italic;
+            font-display: swap;
+            font-stretch: 75% 125%;
+            font-variation-settings: "wght" 300;
+        }
+
+        h1 {
+            font-family: "MyFont";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chiranj Patel</h1>
+</body>
+
+</html>

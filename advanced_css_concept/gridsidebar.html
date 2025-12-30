@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudebar </title>
+    <style>
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 80px;
+
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+
+            background: #f1f3f6;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background: #4b6cb7;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background: #222;
+            color: #ddd;
+            padding: 20px;
+            font-size: 18px;
+            border-right: 3px solid #4b6cb7;
+        }
+
+        /* Content */
+        .content {
+            grid-area: content;
+            padding: 25px;
+            background: white;
+            font-size: 18px;
+            border-radius: 10px 0 0 0;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        @media(max-width:700px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 70px auto 1fr 60px;
+
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="sidebar"></div>
+        <div class="content"></div>
+        <div class="footer"></div>
+    </div>
+
+</body>
+
+</html>

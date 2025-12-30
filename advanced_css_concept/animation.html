@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            background: red;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+            filter: blur(5px);
+            filter: brightness(1);
+            /* default */
+            filter: brightness(0.5);
+            /* darker */
+            filter: brightness(2);
+            /* brighter */
+            filter: contrast(1);
+            filter: contrast(0.5);
+            /* washed */
+            filter: contrast(2);
+            /* harsh */
+            filter: grayscale(1);
+            /* 1 or 100% = full B/W */
+            filter: grayscale(0.5);
+            /* 50% gray */
+            filter: invert(1);
+            filter: invert(0.7);
+            filter: sepia(1);
+            filter: saturate(2);
+            /* super colorful */
+            filter: saturate(0.5);
+            /* dull */
+            filter: opacity(0.1);
+
+            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.9));
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            transition: width 2s ease-in-out;
+            transition-timing-function: cubic-bezier(.06, .83, 1, .19);
+            /* cubic-bezier.com  */
+            filter: hue-rotate(90deg);
+
+        }
+
+        .box:hover {
+            width: 200px;
+        }
+
+        img {
+            filter: grayscale(1) brightness(1.2) contrast(1.3);
+        }
+
+        img:hover {
+            filter: grayscale(0) brightness(1.3);
+        }
+
+        img {
+            filter: grayscale(1);
+            transition: filter .3s ease;
+        }
+
+        img:hover {
+            filter: grayscale(0);
+        }
+
+        .glass {
+            backdrop-filter: blur(10px) brightness(1.2);
+            background: rgba(255, 255, 255, 0.2);
+            filter: url(../contentful.svg);
+        }
+
+        .text {
+            color: red;
+            mix-blend-mode: multiply;
+        }
+
+        .image {
+            -webkit-mask-image: url(../back.jpg);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="ball glass"></div>
+    </div>
+    <div class="image"></div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse, repudiandae minus hic
+        accusantium quibusdam, reiciendis eum, beatae totam ex maxime expedita tempora voluptas fuga placeat. Asperiores
+        in, mollitia atque debitis rerum odit dignissimos explicabo? Optio, odit in modi obcaecati libero sint nam
+        repellendus ab facere? Error velit excepturi earum.</div>
+    <img src="../left-banner-etsy.webp" alt="">
+</body>
+
+</html>
