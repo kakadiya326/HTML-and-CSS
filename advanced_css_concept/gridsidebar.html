@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudebar </title>
     <style>
+        body {
+            margin: 0%;
+        }
+
         .container {
             height: 100vh;
             display: grid;
@@ -15,49 +19,56 @@
             grid-template-areas:
                 "header header"
                 "sidebar content"
-                "footer footer";
+                "sidebar footer";
 
-            background: #f1f3f6;
+            background: hsl(216, 22%, 95%);
         }
 
         /* Header */
         .header {
             grid-area: header;
-            background: #4b6cb7;
-            background: linear-gradient(135deg, #4b6cb7, #182848);
-            color: #fff;
+            background: hsl(222, 43%, 51%);
+            color: hsl(0, 0%, 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 20px;
             font-size: 22px;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
+        .header a{
+            text-decoration: none;
+            color: white;
+        }
+
         /* Sidebar */
         .sidebar {
             grid-area: sidebar;
-            background: #222;
-            color: #ddd;
+            background: hsl(0, 0%, 13%);
+            color: hsl(0, 0%, 87%);
             padding: 20px;
             font-size: 18px;
-            border-right: 3px solid #4b6cb7;
+            border-right: 3px solid hsl(222, 43%, 51%);
+            overflow-y: scroll;
         }
 
         /* Content */
         .content {
             grid-area: content;
             padding: 25px;
-            background: white;
+            background-color: hsl(34, 78%, 91%);
             font-size: 18px;
             border-radius: 10px 0 0 0;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.06);
+            box-shadow: inset 0 0 10px hsla(0, 0%, 0%, 0.06);
+            overflow: scroll;
         }
 
         /* Footer */
         .footer {
             grid-area: footer;
-            background: #0f172a;
+            background: hsl(0, 0%, 13%);
             color: white;
             display: flex;
             align-items: center;
@@ -77,16 +88,60 @@
                     "content"
                     "footer";
             }
+            .sidebar {
+                height: 60px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="header"></div>
-        <div class="sidebar"></div>
-        <div class="content"></div>
-        <div class="footer"></div>
+        <div class="header">
+            <a href="#">Tabs</a>
+            <a href="#">Tabs</a>
+            <a href="#">Tabs</a>
+            <a href="#">Tabs</a>
+            <a href="#">Tabs</a>
+            <a href="#">Tabs</a>
+        </div>
+        <div class="sidebar">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo consequatur ut quo rem rerum obcaecati,
+            sunt a adipisci magni totam quas commodi quam et reprehenderit porro similique magnam repudiandae laborum
+            repellendus minima quos cum? Debitis error itaque nam numquam maxime aut corporis, enim ipsam reiciendis ea
+            quaerat possimus repellendus voluptates eligendi nihil distinctio deleniti ipsum nobis vel natus praesentium
+            similique doloremque quia sequi. Vero cum ea ipsum vel velit amet minima voluptatem mollitia aperiam est,
+            sit pariatur aliquam placeat odit nisi voluptas libero provident, assumenda exercitationem, nam voluptates.
+            Laboriosam maxime praesentium doloribus soluta explicabo odio. Inventore vitae numquam facilis iusto.
+        </div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eum voluptas fuga voluptates ea magnam,
+            consequuntur magni ut laudantium similique nam id itaque ipsam aperiam temporibus eveniet dicta facere.
+            Consequuntur alias officiis necessitatibus mollitia optio perferendis, eos at provident odit, repudiandae
+            beatae veniam animi consectetur eius exercitationem. Ducimus at ullam quisquam nulla maiores magni tenetur,
+            minus rem consectetur consequuntur nobis ipsa sed doloribus officia ratione pariatur laboriosam, ea totam
+            inventore non laudantium dolorem eos. Obcaecati impedit repellendus ratione, adipisci porro molestias
+            perferendis saepe tenetur quis hic delectus exercitationem itaque aperiam nisi eaque, velit magnam modi
+            tempore cupiditate. Aliquam quae repudiandae, quam eligendi fugiat expedita ipsa possimus quidem at magni
+            blanditiis numquam aspernatur asperiores. Possimus dignissimos doloremque deserunt illum dolore corporis
+            perferendis? Magni illum earum aspernatur voluptatum nobis saepe, minima possimus quaerat! Dicta voluptas
+            similique laudantium quidem eveniet, aliquid in veniam laboriosam. Expedita officia laboriosam enim
+            voluptatem id fugiat ullam odit fuga debitis consectetur magni reiciendis dolor, quod saepe! Eius temporibus
+            tempora id nostrum dolore, ullam praesentium sapiente esse doloremque iste. Dicta atque aperiam consequuntur
+            necessitatibus omnis sequi enim adipisci, placeat expedita laudantium dolores autem qui delectus fugiat quo
+            inventore voluptates earum consectetur aliquid reiciendis deserunt? Sit recusandae expedita saepe excepturi,
+            consequatur cupiditate debitis, molestias obcaecati, mollitia nostrum accusantium. Illo provident suscipit,
+            optio molestias pariatur autem eligendi dolorem a nisi eius, vitae earum non, explicabo nobis. Architecto
+            magni excepturi aperiam sunt numquam. Alias esse aliquam aliquid atque nobis architecto quasi consequuntur.
+            Possimus, impedit cupiditate optio officia minus magnam odio error quae accusantium voluptates voluptatem
+            voluptas quaerat. Sunt iste suscipit impedit ducimus a amet doloribus earum quia qui ipsum optio porro ullam
+            perspiciatis, maiores fugiat tempore. Ab cupiditate, animi non harum laboriosam amet eveniet cumque? Maiores
+            quisquam deserunt dolorum inventore quasi facere natus, quos, cupiditate architecto voluptatem eveniet, in
+            laboriosam odit expedita.
+        </div>
+        <div class="footer">
+            Kakadiya Chiranj || chiranjpatel@gmail.com
+        </div>
     </div>
 
 </body>
