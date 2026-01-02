@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Eyes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: #000000;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container .eyes {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-color: #fff;
+            margin: 0 20px;
+            border-radius: 50%;
+            box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 25px #ffe100,
+                inset 0 0 25px #ff7c01;
+            overflow: hidden;
+            animation: blink 3s infinite;
+            transform-origin: center;
+        }
+
+        @keyframes blink {
+
+            0%,
+            90%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            95% {
+                transform: scaleY(0.1);
+            }
+        }
+
+        .pupil {
+            position: absolute;
+            width: 50px;
+            height: 10px;
+            background: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .pupil::before {
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 50px;
+            border-radius: 50%;
+            background: #000;
+            position: absolute;
+            border: 3px solid rgb(0, 0, 0);
+            border-top: transparent;
+            border-bottom: transparent;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXy7YH8fFj-fF6iawxXx1nh31mZTs2pY1IZA&s" alt="">
+    <div class="container">
+        <div class="eyes">
+            <div class="pupil"></div>
+        </div>
+        <div class="eyes">
+            <div class="pupil"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("body").addEventListener("mousemove", function (event) {
+            const eyes = document.querySelectorAll('.eyes');
+
+            eyes.forEach(function (eye) {
+                const pupil = eye.querySelector(".pupil");
+
+                let rect = eye.getBoundingClientRect();
+
+                let eyeCenterX = rect.left + rect.width / 2;
+                let eyeCenterY = rect.top + rect.height / 2;
+
+                let dx = event.pageX - eyeCenterX;
+                let dy = event.pageY - eyeCenterY;
+
+                let angle = Math.atan2(dy, dx);
+
+                let maxMove = 10;
+
+                let x = Math.cos(angle) * maxMove;
+                let y = Math.sin(angle) * maxMove;
+
+                pupil.style.transform =
+                    `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+
+            });
+        }
+        );
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Eyes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: #000000;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container .eyes {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 20px;
+            box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2),
+                inset 0 0 25px #767574;
+            overflow: hidden;
+            animation: blink 3s infinite;
+            transform-origin: center;
+        }
+
+        @keyframes blink {
+
+            0%,
+            90%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            95% {
+                transform: scaleX(0.1);
+            }
+        }
+
+
+        .pupil {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: black;
+            border-radius: 50%;
+            border: 4px solid rgb(9, 0, 123);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="eyes">
+            <div class="pupil"></div>
+        </div>
+        <div class="eyes">
+            <div class="pupil"></div>
+        </div>
+    </div>
+
+    <script>
+        document.body.addEventListener("mousemove", (event) => {
+            const eyes = document.querySelectorAll(".eyes");
+
+            eyes.forEach(eye => {
+                const pupil = eye.querySelector(".pupil");
+
+                let rect = eye.getBoundingClientRect();
+
+                let eyeCenterX = rect.left + rect.width / 2;
+                let eyeCenterY = rect.top + rect.height / 2;
+
+                let dx = event.pageX - eyeCenterX;
+                let dy = event.pageY - eyeCenterY;
+
+                let angle = Math.atan2(dy, dx);
+
+                let maxMove = 20;
+
+                let x = Math.cos(angle) * maxMove;
+                let y = Math.sin(angle) * maxMove;
+
+                pupil.style.transform =
+                    `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+            });
+        });
+
+    </script>
+</body>
+
+</html> -->
